@@ -13,6 +13,11 @@ const app = express();
 // Connect to database
 connectToDb();
 
+
+app.listen(()=>{
+console.log("Listening to PORT: "+ proccess.env.PORT);
+},proccess.env.PORT)
+
 // Configure express
 app.use(express.json());
 
