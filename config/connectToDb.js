@@ -1,10 +1,5 @@
-// Load .env variables
-if(process.env.NODE_ENV != 'production'){
-    require("dotenv").config();
-}
-
+require("dotenv").config();
 const mongoose = require('mongoose');
-
 
 async function connectToDB(){
     try{
@@ -14,6 +9,5 @@ async function connectToDB(){
         console.log(err);
     }
 }
-
 
 module.exports = connectToDB;
